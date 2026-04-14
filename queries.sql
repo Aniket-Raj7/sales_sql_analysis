@@ -1,4 +1,4 @@
--- running total and MTD
+# running total and MTD
 
 with a as(select orders.order_date,
 round(sum(order_details.quantity*pizzas.price),2) as sales from orders
