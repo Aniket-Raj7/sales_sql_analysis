@@ -8,10 +8,8 @@ join pizzas
 using(pizza_id)
 GROUP BY(orders.order_date))
 
-
 select * , round(sum(sales) over(ORDER BY order_date),2) as running_total, 
 round(sum(sales) over(PARTITION BY MONTH(order_date) ORDER BY order_date),2) as MTD
-
 from a;
 
 
